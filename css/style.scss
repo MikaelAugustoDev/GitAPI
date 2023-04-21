@@ -1,0 +1,389 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: 300;
+    font-family: "Kumbh Sans", sans-serif;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    background-color: #24292e;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: grey;
+}
+
+a {
+    text-decoration: none;
+    color: var(--cor-branca);
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+body {
+    background-color: #24292e;
+    font-family: "Kumbh Sans", sans-serif;
+    text-align: center;
+    padding-bottom: 100px;
+
+
+    main {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding: 150px 0 0 0;
+        align-items: center;
+        position: relative;
+
+        .devicon-github-original {
+            margin-bottom: 30px;
+            background-image: url(../assets/github.svg);
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            top: 20px;
+            left: 46%;
+        }
+
+        .section {
+            padding: 70px 0;
+        }
+
+        .container {
+            width: 60%;
+            /* se for uma tela menor que 980px vai se adaptar a 70% */
+            max-width: 960px;
+            /* quando chegar em 980px para de aumentar */
+            box-shadow: rgba(0, 0, 0, 0.3) 0px 25px 50px -12px;
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-radius: 30px;
+            padding: 30px;
+            margin: 0 auto;
+
+            header {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                padding: 30px 0;
+
+                h2 {
+                    font-size: 20px;
+                    font-weight: 700;
+                    margin-bottom: 30px;
+                }
+
+                #input {
+                    width: 400px;
+                    font-size: 17px;
+                    margin: 0 auto;
+                    padding: 10px;
+                    border-radius: 7px;
+                    border: 1px solid grey;
+
+                    &:focus {
+                        outline: none;
+                    }
+                }
+
+                #error {
+                    color: red;
+                    margin-top: 10px;
+                    font-weight: 600;
+                    display: none;
+                }
+
+                #btn {
+                    width: 200px;
+                    font-size: 17px;
+                    margin: 20px auto 0;
+                    padding: 10px;
+                    border-radius: 7px;
+                    cursor: pointer;
+                    border: 1px solid grey;
+                    transition: 0.5s ease-in-out;
+
+                    &:hover {
+                        background-color: hotpink;
+                        color: #ffffff;
+                        border-color: #ffffff;
+                    }
+                }
+
+            }
+
+            .profile-data {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 40px;
+
+                .info {
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: center;
+
+                    .data {
+                        padding: 10px;
+                        width: 50%;
+
+                        .follows {
+                            background: grey;
+                            border-radius: 10px;
+                            padding: 5px;
+                            width: 100%;
+                            margin-top: 10px;
+                            display: flex;
+                            justify-content: space-around;
+                            color: #fff;
+                        }
+                    }
+
+                    img {
+                        width: 50%;
+                        border-radius: 50%;
+                        border: 5px solid hotpink;
+                    }
+
+                    h1 {
+                        font-size: 20px;
+                        margin-bottom: 20px;
+                        font-weight: 700;
+                    }
+
+                    p {
+                        font-size: 15px;
+                        font-weight: 400;
+                        line-height: 23px;
+                    }
+
+                }
+
+                .links {
+                    width: 80%;
+                    margin-top: 50px;
+                    height: 200px;
+                    background: grey;
+                    border-radius: 15px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 25px;
+                    padding: 10px;
+
+                    a {
+                        display: flex;
+                        color: #fff;
+                        gap: 10px;
+                        align-items: center;
+
+                        .image {
+                            width: 25px;
+                            height: 25px;
+                        }
+
+                        .image.local {
+                            background-image: url(../assets/maps.svg);
+                            
+                        }
+
+                    }
+
+                }
+
+                .repositories {
+
+                    h2 {
+                        margin-bottom: 30px;
+                        text-align: center;
+                    }
+
+                    ul {
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: center;
+
+                        li {
+
+                            a {
+                                padding: 20px;
+                                border: 1px solid grey;
+                                margin: 20px;
+                                display: block;
+                                border-radius: 7px;
+                                transition: 0.3s ease-in-out;
+
+                                &:hover {
+                                    background-color: hotpink;
+                                    color: #fff
+                                }
+                            }
+
+                        }
+                    }
+                }
+
+                .hide {
+                    display: none;
+                }
+
+            }
+
+        }
+    }
+}
+
+@media (max-width: 1280px) {
+    .container {
+        flex-direction: column;
+        width: 90%;
+        border-radius: 20px;
+
+        header {
+            width: 100%;
+
+            h1 {
+                font-size: 24px;
+                text-align: center;
+            }
+
+        }
+
+    }
+}
+
+@media (max-width: 768px) {
+
+    body {
+
+        main {
+
+            .devicon-github-original {
+                left: 43%;
+            }
+
+            .container {
+
+                width: 95%;
+
+                header {
+
+                    #input {
+                        max-width: 100%;
+                    }
+
+                    #btn {
+                        max-width: 100%;
+                    }
+                }
+
+                .profile-data{
+
+                    .info {
+                        display: flex;
+                        flex-direction: column;
+
+                        img {
+                            width: 300px;
+                        }
+
+                        .data {
+
+                            min-width: 300px;
+
+                            h1{
+                               min-width: 300px;
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+
+    }
+
+}
+
+@media (max-width: 425px) {
+
+    body {
+
+        main {
+
+            .devicon-github-original {
+                left: 38%;
+            }
+
+            .container {
+
+                .profile-data {
+
+                    .info {
+
+                        img {
+                            width: 100px;
+                        }
+
+                        img,
+                        .data {
+                            width: 100%;
+                            padding: 0;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+}
+
+@media (max-width: 320px) {
+
+    body {
+
+        main {
+
+            .devicon-github-original {
+                left: 34%;
+            }
+
+            .container {
+
+                .profile-data {
+                    padding: 0;
+
+                    .info {
+
+                        img {
+                            width: 280px;
+                        }
+
+                        .data{
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+
+                            .follows {
+
+                                width: 280px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,276 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-weight: 300;
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  background-color: #24292e;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: grey;
+}
+
+a {
+  text-decoration: none;
+  color: var(--cor-branca);
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  background-color: #24292e;
+  font-family: "Kumbh Sans", sans-serif;
+  text-align: center;
+  padding-bottom: 100px;
+}
+body main {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 150px 0 0 0;
+  align-items: center;
+  position: relative;
+}
+body main .devicon-github-original {
+  margin-bottom: 30px;
+  background-image: url(../assets/github.svg);
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 20px;
+  left: 46%;
+}
+body main .section {
+  padding: 70px 0;
+}
+body main .container {
+  width: 60%;
+  /* se for uma tela menor que 980px vai se adaptar a 70% */
+  max-width: 960px;
+  /* quando chegar em 980px para de aumentar */
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 25px 50px -12px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 30px;
+  padding: 30px;
+  margin: 0 auto;
+}
+body main .container header {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 30px 0;
+}
+body main .container header h2 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+body main .container header #input {
+  width: 400px;
+  font-size: 17px;
+  margin: 0 auto;
+  padding: 10px;
+  border-radius: 7px;
+  border: 1px solid grey;
+}
+body main .container header #input:focus {
+  outline: none;
+}
+body main .container header #error {
+  color: red;
+  margin-top: 10px;
+  font-weight: 600;
+  display: none;
+}
+body main .container header #btn {
+  width: 200px;
+  font-size: 17px;
+  margin: 20px auto 0;
+  padding: 10px;
+  border-radius: 7px;
+  cursor: pointer;
+  border: 1px solid grey;
+  transition: 0.5s ease-in-out;
+}
+body main .container header #btn:hover {
+  background-color: hotpink;
+  color: #ffffff;
+  border-color: #ffffff;
+}
+body main .container .profile-data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+}
+body main .container .profile-data .info {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+body main .container .profile-data .info .data {
+  padding: 10px;
+  width: 50%;
+}
+body main .container .profile-data .info .data .follows {
+  background: grey;
+  border-radius: 10px;
+  padding: 5px;
+  width: 100%;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-around;
+  color: #fff;
+}
+body main .container .profile-data .info img {
+  width: 50%;
+  border-radius: 50%;
+  border: 5px solid hotpink;
+}
+body main .container .profile-data .info h1 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+body main .container .profile-data .info p {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 23px;
+}
+body main .container .profile-data .links {
+  width: 80%;
+  margin-top: 50px;
+  height: 200px;
+  background: grey;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 10px;
+}
+body main .container .profile-data .links a {
+  display: flex;
+  color: #fff;
+  gap: 10px;
+  align-items: center;
+}
+body main .container .profile-data .links a .image {
+  width: 25px;
+  height: 25px;
+}
+body main .container .profile-data .links a .image.local {
+  background-image: url(../assets/maps.svg);
+}
+body main .container .profile-data .repositories h2 {
+  margin-bottom: 30px;
+  text-align: center;
+}
+body main .container .profile-data .repositories ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+body main .container .profile-data .repositories ul li a {
+  padding: 20px;
+  border: 1px solid grey;
+  margin: 20px;
+  display: block;
+  border-radius: 7px;
+  transition: 0.3s ease-in-out;
+}
+body main .container .profile-data .repositories ul li a:hover {
+  background-color: hotpink;
+  color: #fff;
+}
+body main .container .profile-data .hide {
+  display: none;
+}
+
+@media (max-width: 1280px) {
+  .container {
+    flex-direction: column;
+    width: 90%;
+    border-radius: 20px;
+  }
+  .container header {
+    width: 100%;
+  }
+  .container header h1 {
+    font-size: 24px;
+    text-align: center;
+  }
+}
+@media (max-width: 768px) {
+  body main .devicon-github-original {
+    left: 43%;
+  }
+  body main .container {
+    width: 95%;
+  }
+  body main .container header #input {
+    max-width: 100%;
+  }
+  body main .container header #btn {
+    max-width: 100%;
+  }
+  body main .container .profile-data .info {
+    display: flex;
+    flex-direction: column;
+  }
+  body main .container .profile-data .info img {
+    width: 300px;
+  }
+  body main .container .profile-data .info .data {
+    min-width: 300px;
+  }
+  body main .container .profile-data .info .data h1 {
+    min-width: 300px;
+  }
+}
+@media (max-width: 425px) {
+  body main .devicon-github-original {
+    left: 38%;
+  }
+  body main .container .profile-data .info img {
+    width: 100px;
+  }
+  body main .container .profile-data .info img,
+  body main .container .profile-data .info .data {
+    width: 100%;
+    padding: 0;
+  }
+}
+@media (max-width: 320px) {
+  body main .devicon-github-original {
+    left: 34%;
+  }
+  body main .container .profile-data {
+    padding: 0;
+  }
+  body main .container .profile-data .info img {
+    width: 280px;
+  }
+  body main .container .profile-data .info .data {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  body main .container .profile-data .info .data .follows {
+    width: 280px;
+  }
+}/*# sourceMappingURL=style.css.map */
